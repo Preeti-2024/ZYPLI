@@ -1,16 +1,165 @@
 <section class="hero">
-  <div class="hero-content">
-    <h1>Welcome to the Future</h1>
-    <p>
-      ZYPLI delivers intelligent IoT and smart energy solutions that power
-      innovation, sustainability, and automation for tomorrow’s world.
-    </p>
-    <a href="#" class="hero-btn">Explore More</a>
+  <div class="hero-slides">
+    <!-- SLIDE 1 -->
+    <div
+      class="hero-slide active"
+      style="background-image: url('/sections/assets/images/windmill.jpg')"
+    >
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1>Welcome to the Future</h1>
+          <p>
+            ZYPLI delivers intelligent IoT and smart energy solutions that power
+            innovation, sustainability, and automation for tomorrow’s world.
+          </p>
+          <a href="#" class="hero-btn" onclick="loadSection('services')">
+            Explore More
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div
+      class="hero-slide"
+      style="background-image: url('/sections/assets/images/energy.jpg')"
+    >
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1>Smart Energy. Smart Decisions.</h1>
+          <p>
+            Real-time monitoring and analytics to optimize performance and
+            reduce operational costs.
+          </p>
+          <a href="#" class="hero-btn" onclick="loadSection('services')">
+            Our Services
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div
+      class="hero-slide"
+      style="background-image: url('/sections/assets/images/solar.jpg')"
+    >
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1>Industrial IoT Solutions</h1>
+          <p>
+            Intelligent automation and device integration for modern industries.
+          </p>
+          <a href="#" class="hero-btn" onclick="loadSection('contact')">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div
+      class="hero-slide"
+      style="background-image: url('/sections/assets/images/green.jpg')"
+    >
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1>Sustainable & Scalable</h1>
+          <p>
+            Carbon tracking and sustainability-driven IoT platforms for a
+            greener future.
+          </p>
+          <a href="#" class="hero-btn" onclick="loadSection('contact')">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- Services Cards Section -->
+<section class="home-services-cards">
+  <h2>Our Services</h2>
+  <div class="cards-container">
+    <!-- Card 1 -->
+    <div class="service-card">
+      <img src="sections/assets/images/windmill.jpg" alt="Smart Energy" />
+      <div class="card-content">
+        <h3>Smart Energy</h3>
+        <p>Real-time monitoring and analytics to optimize performance.</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="service-card">
+      <img src="sections/assets/images/energy.jpg" alt="Industrial IoT" />
+      <div class="card-content">
+        <h3>Industrial IoT</h3>
+        <p>Automation and device integration for modern industries.</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="service-card">
+      <img src="sections/assets/images/solar.jpg" alt="Sustainable Platforms" />
+      <div class="card-content">
+        <h3>Sustainable Platforms</h3>
+        <p>Carbon tracking and IoT platforms for a greener future.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Single Explore More Button -->
+  <div style="text-align: center; margin-top: 30px">
+    <button class="explore-btn" onclick="loadSection('services')">
+      Explore More
+    </button>
+  </div>
+</section>
+<!--Part 3-->
+<section class="importance-section">
+  <div class="importance-inner">
+    <h2>Importance of Energy Management</h2>
+
+    <div class="importance-cards">
+      <div class="importance-card">
+        <h3>Environmental Impact</h3>
+        <p>
+          Energy management is vital for reducing carbon footprints and
+          mitigating climate change.
+        </p>
+      </div>
+
+      <div class="importance-card">
+        <h3>Resource Conservation</h3>
+        <p>
+          Aids in conserving valuable natural resources, ensuring sustainability
+          for future generations.
+        </p>
+      </div>
+
+      <div class="importance-card">
+        <h3>Cost Savings</h3>
+        <p>
+          Optimizing energy consumption leads to significant cost savings for
+          businesses and organizations.
+        </p>
+      </div>
+
+      <div class="importance-card">
+        <h3>Competitive Advantage</h3>
+        <p>
+          Adopting sustainable energy practices enhances brand reputation and
+          attracts conscious customers.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Have Any Query Section -->
 <section class="contact-cta">
   <h2>Have Any Query?</h2>
   <p>Connect with us to build smarter and sustainable solutions.</p>
-  <a href="#">Contact Us</a>
+  <a href="#" onclick="loadSection('contact')">Contact Us</a>
 </section>
