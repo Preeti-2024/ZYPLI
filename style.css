@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(8, 29, 51, 0.95);
+  z-index: 1000;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar nav a {
+  margin-left: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navbar nav a:hover {
+  color: #5fa8ff;
+}
+
+/* MAIN */
+main {
+  margin-top: 80px;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  background-image: url("assets/images/windmill.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 70% center; /* KEY FIX */
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+/* LIGHTER & SMOOTH OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(8, 29, 51, 0.72),
+    rgba(8, 29, 51, 0.45),
+    rgba(8, 29, 51, 0.2)
+  );
+}
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+  color: #ffffff;
+}
+
+.hero-content h1 {
+  font-size: 54px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #1e90ff;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #1475cc;
+}
+
+/* CONTACT CTA */
+.contact-cta {
+  background: #0a2540;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contact-cta h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.contact-cta p {
+  margin-bottom: 25px;
+}
+
+.contact-cta a {
+  padding: 12px 30px;
+  background: #1e90ff;
+  color: white;
+  text-decoration: none;
+}
+
+/* FOOTER */
+.footer {
+  background: #081d33;
+  color: #ccc;
+  text-align: center;
+  padding: 15px;
+}
+/* ================= SERVICES ================= */
+
+.services {
+  padding: 100px 10%;
+  background: #f8f9fb;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.services-header h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #081d33;
+}
+
+.services-header p {
+  max-width: 700px;
+  margin: auto;
+  color: #555;
+  line-height: 1.7;
+}
+
+.service-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 90px;
+}
+
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-row img {
+  width: 45%;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.service-content {
+  width: 55%;
+}
+
+.service-content h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #081d33;
+}
+
+.service-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+  .service-row,
+  .service-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-row img,
+  .service-content {
+    width: 100%;
+  }
+}
