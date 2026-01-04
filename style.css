@@ -351,7 +351,7 @@ main {
 /* ================= SERVICES RENDER PAGE ================= */
 
 .services {
-  padding: 100px 10%;
+  padding: 40px 10% 90px;
   background: #f8f9fb;
 }
 
@@ -465,4 +465,225 @@ main {
   font-size: 16px;
   line-height: 1.6;
   color: #555;
+}
+
+/*ABOUT SECTION*/
+.about-section {
+  padding: 40px 10% 90px;
+  background: #f9fbfd;
+  text-align: center;
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-section h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+  color: #0a2540;
+}
+
+.about-description {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.about-focus {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.about-title {
+  margin-top: 0;
+}
+
+.focus-card {
+  background: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.35s ease;
+}
+
+.focus-card {
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.focus-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 144, 255, 0.15),
+    rgba(0, 200, 255, 0.15)
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 0;
+}
+
+.focus-card:hover::before {
+  opacity: 1;
+}
+
+.focus-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.focus-card h3,
+.focus-card p {
+  position: relative;
+  z-index: 1;
+}
+
+.focus-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #1e90ff;
+}
+
+.focus-card p {
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.focus-card.full {
+  grid-column: span 2;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-focus {
+    grid-template-columns: 1fr;
+  }
+
+  .focus-card.full {
+    grid-column: span 1;
+  }
+}
+/* CONTACT SECTION */
+/* =========================
+   CONTACT PAGE STYLING
+   ========================= */
+
+.contact-section {
+  padding: 80px 10%;
+  background: #f7f9fc;
+}
+
+/* Main card container */
+.contact-container {
+  display: flex;
+  gap: 60px;
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 14px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* -------------------------
+   LEFT SIDE - INFO
+-------------------------- */
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  font-size: 34px;
+  margin-bottom: 18px;
+  color: #0a2540;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+/* Contact details */
+.contact-details {
+  margin-top: 30px;
+}
+
+.contact-details div {
+  margin-bottom: 18px;
+  font-size: 15px;
+  color: #333;
+}
+
+.contact-details strong {
+  display: block;
+  color: #0a2540;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+/* -------------------------
+   RIGHT SIDE - FORM
+-------------------------- */
+.contact-form {
+  flex: 1;
+}
+
+/* Inputs & textarea */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid #cfd6e4;
+  font-size: 15px;
+  background: #ffffff;
+  color: #333;
+}
+
+.contact-form textarea {
+  min-height: 160px;
+  resize: none;
+}
+
+/* Focus effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #1e90ff;
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.15);
+}
+
+/* Submit button */
+.contact-form button {
+  padding: 14px 36px;
+  background: #1e90ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #1475cc;
+}
+
+/* -------------------------
+   RESPONSIVE
+-------------------------- */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 40px;
+  }
 }
