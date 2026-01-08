@@ -68,3 +68,54 @@ function animateServices() {
 
   rows.forEach((row) => observer.observe(row));
 }
+/* ===========================
+   ABOUT US – FOCUS CARD POPUP
+   =========================== */
+
+// Open popup
+function openFocusModal(image, title, text) {
+  const modal = document.getElementById("focusModal");
+  const modalImage = document.getElementById("modalImage");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalText = document.getElementById("modalText");
+
+  if (!modal) return;
+
+  modalImage.src = image;
+  modalTitle.innerText = title;
+  modalText.innerText = text;
+
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden"; // prevent background scroll
+}
+
+// Close popup
+function closeFocusModal() {
+  const modal = document.getElementById("focusModal");
+  if (!modal) return;
+
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+// Close popup when clicking outside content
+document.addEventListener("click", function (e) {
+  const modal = document.getElementById("focusModal");
+  const modalContent = document.querySelector(".focus-modal-content");
+
+  if (
+    modal &&
+    modal.style.display === "flex" &&
+    !modalContent.contains(e.target) &&
+    e.target.id === "focusModal"
+  ) {
+    closeFocusModal();
+  }
+});
+
+// Close popup on ESC key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeFocusModal();
+  }
+});

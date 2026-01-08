@@ -519,16 +519,156 @@ main {
   color: #555;
   line-height: 1.6;
 }
+/* ===== Focus Card Popup ===== */
+.focus-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 25, 45, 0.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Popup box */
+.focus-modal-content {
+  background: #ffffff;
+  width: 75%; /* ⬅ increased width */
+  max-width: 850px; /* ⬅ bigger popup */
+  border-radius: 16px;
+  padding: 32px 36px; /* ⬅ more spacing */
+  text-align: center;
+  position: relative;
+  animation: popupFade 0.35s ease;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Popup image */
+.focus-modal-content img {
+  width: 100%;
+  height: 300px; /* ⬅ taller image */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 22px;
+}
+
+/* Popup heading */
+.focus-modal-content h3 {
+  font-size: 26px; /* ⬅ larger text */
+  color: #003366;
+  margin-bottom: 14px;
+}
+
+/* Popup text */
+.focus-modal-content p {
+  font-size: 16px; /* ⬅ improved readability */
+  color: #555;
+  line-height: 1.75;
+}
+
+/* Close Button */
+.focus-modal-close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 42px; /* ⬅ slightly bigger */
+  height: 42px;
+  border-radius: 50%;
+  background: #e63946;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+  z-index: 10;
+}
+/* Make focus cards clickable */
+.focus-card {
+  cursor: pointer;
+}
+
+/* Cursor on image hover */
+.focus-card img {
+  cursor: pointer;
+}
+
+.focus-modal-close:hover {
+  background: #c62828;
+  transform: scale(1.12);
+}
+
+/* Animation */
+@keyframes popupFade {
+  from {
+    transform: scale(0.88);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .focus-modal-content {
+    width: 90%;
+    padding: 24px;
+  }
+
+  .focus-modal-content img {
+    height: 220px;
+  }
+
+  .focus-modal-content h3 {
+    font-size: 22px;
+  }
+
+  .focus-modal-content p {
+    font-size: 15px;
+  }
+}
+
 /* =========================
    CONTACT PAGE STYLING
    ========================= */
 
+/* =========================
+   CONTACT HEADER
+========================= */
+.contact-header {
+  text-align: center;
+  padding: 40px 10% 20px;
+  background: #f4f7fb;
+}
+
+.contact-header h1 {
+  font-size: 40px;
+  color: #0a2540;
+  margin-bottom: 12px;
+}
+
+.contact-header p {
+  font-size: 16px;
+  color: #555;
+  max-width: 850px;
+  margin: 0 auto 6px;
+  line-height: 1.7;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
 .contact-section {
-  padding: 80px 10%;
+  padding: 30px 10% 60px;
   background: #f7f9fc;
 }
 
-/* Main card container */
 .contact-container {
   display: flex;
   gap: 60px;
@@ -538,52 +678,55 @@ main {
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
 }
 
-/* -------------------------
-   LEFT SIDE - INFO
--------------------------- */
+/* LEFT SIDE */
 .contact-info {
   flex: 1;
 }
 
 .contact-info h2 {
-  font-size: 34px;
-  margin-bottom: 18px;
+  font-size: 30px;
+  margin-bottom: 16px;
   color: #0a2540;
 }
 
 .contact-info p {
-  font-size: 16px;
+  font-size: 15px;
   color: #555;
-  margin-bottom: 14px;
+  margin-bottom: 22px;
   line-height: 1.7;
 }
 
-/* Contact details */
-.contact-details {
-  margin-top: 30px;
+/* INFO BLOCK WITH ICON */
+.info-block {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 22px;
 }
 
-.contact-details div {
-  margin-bottom: 18px;
+.info-block .icon {
+  font-size: 22px;
+  color: #1e90ff;
+  margin-top: 4px;
+}
+
+.info-block h4 {
   font-size: 15px;
-  color: #333;
-}
-
-.contact-details strong {
-  display: block;
-  color: #0a2540;
   margin-bottom: 4px;
-  font-weight: 600;
+  color: #0a2540;
 }
 
-/* -------------------------
-   RIGHT SIDE - FORM
--------------------------- */
+.info-block p {
+  font-size: 14px;
+  color: #444;
+  margin: 0;
+}
+
+/* RIGHT SIDE FORM */
 .contact-form {
   flex: 1;
 }
 
-/* Inputs & textarea */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -593,15 +736,13 @@ main {
   border: 1px solid #cfd6e4;
   font-size: 15px;
   background: #ffffff;
-  color: #333;
 }
 
 .contact-form textarea {
-  min-height: 160px;
   resize: none;
+  min-height: 160px;
 }
 
-/* Focus effect */
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
@@ -609,7 +750,6 @@ main {
   box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.15);
 }
 
-/* Submit button */
 .contact-form button {
   padding: 14px 36px;
   background: #1e90ff;
@@ -625,9 +765,7 @@ main {
   background: #1475cc;
 }
 
-/* -------------------------
-   RESPONSIVE
--------------------------- */
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .contact-container {
     flex-direction: column;

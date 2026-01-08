@@ -4,7 +4,14 @@
     <h2 class="section-title">Areas We Focus</h2>
 
     <div class="focus-grid">
-      <div class="focus-card">
+      <div
+        class="focus-card"
+        onclick="openFocusModal(
+    'sections/assets/images/energy.jpg',
+    'Industries',
+    'Smart energy solutions for industrial operations to optimize power usage.'
+    )"
+      >
         <img src="sections/assets/images/energy.jpg" alt="Industries" />
         <h3>Industries</h3>
         <p>
@@ -12,8 +19,15 @@
           usage.
         </p>
       </div>
-
-      <div class="focus-card">
+      <!-- Card 2 -->
+      <div
+        class="focus-card"
+        onclick="openFocusModal(
+    'sections/assets/images/windmill.jpg',
+    'Commercial Security',
+      'Advanced monitoring and analytics for commercial facilities.'
+    )"
+      >
         <img
           src="sections/assets/images/windmill.jpg"
           alt="Commercial Security"
@@ -22,7 +36,14 @@
         <p>Advanced monitoring and analytics for commercial facilities.</p>
       </div>
 
-      <div class="focus-card">
+      <div
+        class="focus-card"
+        onclick="openFocusModal(
+    'sections/assets/images/green.jpg',
+     'Residential Security',
+      'Energy-efficient solutions for smart homes and apartments.'
+    )"
+      >
         <img
           src="sections/assets/images/green.jpg"
           alt="Residential Security"
@@ -31,13 +52,27 @@
         <p>Energy-efficient solutions for smart homes and apartments.</p>
       </div>
 
-      <div class="focus-card">
+      <div
+        class="focus-card"
+        onclick="openFocusModal(
+    'sections/assets/images/solar.jpg',
+    'Indoor Air Quality',
+    'Ensuring healthier indoor environments through real-time monitoring.'
+    )"
+      >
         <img src="sections/assets/images/solar.jpg" alt="Indoor Air Quality" />
         <h3>Indoor Air Quality</h3>
         <p>Ensuring healthier environments through real-time monitoring.</p>
       </div>
 
-      <div class="focus-card">
+      <div
+        class="focus-card"
+        onclick="openFocusModal(
+    'sections/assets/images/energy.jpg',
+    'Energy Efficiency',
+      'Data-driven insights to reduce energy consumption and operational costs.'
+    )"
+      >
         <img src="sections/assets/images/energy.jpg" alt="Energy Efficiency" />
         <h3>Energy Efficiency</h3>
         <p>Data-driven insights to reduce consumption and costs.</p>
@@ -45,3 +80,13 @@
     </div>
   </div>
 </section>
+<!-- Focus Card Popup -->
+<div id="focusModal" class="focus-modal">
+  <div class="focus-modal-content">
+    <button class="focus-modal-close" onclick="closeFocusModal()">×</button>
+
+    <img id="modalImage" alt="Focus Image" />
+    <h3 id="modalTitle"></h3>
+    <p id="modalText"></p>
+  </div>
+</div>
